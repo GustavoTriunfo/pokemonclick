@@ -1,0 +1,130 @@
+body{
+    font-family: Montserrat, sans-serif;
+}
+
+.barra-de-progresso {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 10px;
+    background-color:#ff0000;
+    border-top: 0px solid #ffffff;
+    text-align: center;
+    line-height: 30px;
+    font-size: 14px;
+    color: #333;
+}
+
+.barra-de-progresso::before {
+    content: "";
+    display: block;
+    height: 100%;
+    width: 0;
+    background-color: #44ff00; /* Cor da barra de progresso preenchida */
+    transition: width 0.3s ease-in-out;
+}
+
+.background-principal{
+    background-image: url(imagens/fundoroxogif.gif);
+    background-size: cover;
+    z-index: 1;
+    padding: 365px 
+}
+
+.logo-pokemon{
+    position: fixed;
+    top: 0px;
+    left: 550px;
+    height: 147px;
+    width: 400px;
+}
+
+.icone-presente{
+    position: fixed;
+    top: 200px;
+    left: 630px;
+    height: 250px;
+    width: 250px;
+    z-index: 1;
+}
+
+.pokebolas-presente{
+    position: fixed;
+    top: 280px;
+    left: 630px;
+    height: 250px;
+    width: 250px;
+    z-index: 2;
+}
+
+.menu-toggle {
+    position: fixed;
+    background-image: url(imagens/pokedex-icon.png);
+    background-size: cover;
+    padding: 40px;
+    top: 100px;
+    left: 20px;
+    cursor: pointer;
+    z-index: 3; /* Colocado acima do menu lateral */
+    transition: 0.4s;
+}
+
+
+
+.menu-lateral-pokedex{
+    position: absolute;
+    top: 180px;
+    left: -750px; /* Inicialmente, oculto à esquerda */
+    border: 0px;
+    width: 700px;
+    height: 500px;
+    background-color: rgba(0, 0, 0, 0.5); /* Cor de fundo com transparência */
+    z-index: 3;
+    transition: 0.4s; /* Adiciona uma transição suave */
+    overflow-y: auto;
+}
+
+.menu-lateral-pokedex.open {
+    left: 5px;
+}
+
+.menu-toggle:hover {
+    transform: scale(1.1); 
+}
+.pokemon{
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 200px;
+    height: 200px;
+}
+.pokedex{
+    position: absolute;
+    top: 0px;
+    right: 0px;
+}
+
+.pokeball{
+    position: absolute;
+    top: 215px;
+    right: 195px;
+    width: 180px;
+    height: 180px;
+}
+
+.contagem-total{
+    position: absolute;
+    top: 665px;
+    left: 30px;
+    color: rgb(255, 255, 255);
+    font-size: 25px;
+}
+
+.contagem-pokeball{
+    position: absolute;
+    top: 525px;
+    right: 255px;
+    color: rgb(255, 255, 255);
+    font-size: 50px;
+}
