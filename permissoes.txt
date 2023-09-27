@@ -1,0 +1,9 @@
+pk1=false$normal;pk2=false$epico;pk3=true$epico;pk4=true$epico;pk5=true$epico;pk6=true$epico;pk7=true$epico;pk8=true$epico;
+pk9=true$epico;pk10=true$epico;pk11=true$epico;pk12=true$epico;
+pk13=true$epico;pk14=true$epico;pk15=true$epico;pk16=true$epico;pk17=true$epico;pk18=true$epico;pk19=true$epico;pk20=true$epico;
+pk21=true$epico;pk22=true$epico;pk23=true$epico;pk24=true$epico;pk25=true$epico;pk26=true$epico;pk27=true$epico;pk28=true$epico;
+pk29=true$epico;pk30=true$epico;pk31=true$epico;pk32=true$epico;pk33=true$epico;pk34=true$epico;pk35=true$epico;pk36=true$epico;
+pk37=true$epico;pk38=true$epico;pk39=true$epico;pk40=true$epico;pk41=true$epico;pk42=true$epico;
+pk43=true$epico;pk44=true$epico;pk45=true$epico;pk46=true$epico;pk47=true$epico;pk48=true$epico;pk49=true$epico;pk50=true$epico;
+pk51=true$epico;pk52=true$epico;pk53=true$epico;pk54=true$epico;pk55=true$epico;pk56=true$epico;pk57=true$epico;pk58=true$epico;
+pk59=true$epico;pk60=true$epico;

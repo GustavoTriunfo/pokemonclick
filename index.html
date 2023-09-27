@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Pokémon</title>
+
+    <link rel="icon" href="imagens/Poké_Ball_icon.svg.png" type="image/x-icon">
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap">
+</head>
+<body>
+    <div class="barra-de-progresso cor-padrão" id="barra-de-progresso"></div>
+    <div class="barra-de-progresso" id="barra-de-progresso"></div>
+    <header>
+     
+        <img onclick="sortearEAtualizarPokeball()" class="icone-presente" src="imagens/Pokeball-Box.png" alt="presente">
+        <img class="logo-pokemon" src="imagens/pokemon-png-logo.png" alt="pokemon-png-logo">
+    </header>
+     <!-- Botão "hamburger" para abrir/fechar o menu -->
+  <div class="menu-toggle" id="menu-toggle"></div>
+    <div class="background-principal">
+        <div class="menu-lateral-pokedex" id="menu-lateral-pokedex">
+
+            <img id="pk1" style="top: 0px; left: -30px; display: none;" class="pokemon" src="imagens/pokemons/pk1.png" alt="pokemon">
+            <img id="pk2" style="top: 0px; left: 110px; display: none;" class="pokemon" src="imagens/pokemons/pk2.png" alt="pokemon">
+            <img id="pk3" style="top: 0px; left: 245px; display: none;" class="pokemon" src="imagens/pokemons/pk3.png" alt="pokemon">
+            <img id="pk4" style="top: 0px; left: 385px; display: none;" class="pokemon" src="imagens/pokemons/pk4.png" alt="pokemon">
+            <img id="pk5" style="top: 0px; left: 525px; display: none;" class="pokemon" src="imagens/pokemons/pk5.png" alt="pokemon">
+            <img id="pk6" style="top: 245px; left: -30px; display: none;" class="pokemon" src="imagens/pokemons/pk6.png" alt="pokemon">
+            <img id="pk7" style="top: 245px; left: 110px; display: none;" class="pokemon" src="imagens/pokemons/pk7.png" alt="pokemon">
+            <img id="pk8" style="top: 245px; left: 245px; display: none;" class="pokemon" src="imagens/pokemons/pk8.png" alt="pokemon">
+            <img id="pk9" style="top: 245px; left: 385px; display: none;" class="pokemon" src="imagens/pokemons/pk9.png" alt="pokemon">
+            <img id="pk10" style="top: 245px; left: 525px; display: none;" class="pokemon" src="imagens/pokemons/pk10.png" alt="pokemon">
+            <img id="pk11" style="top: 490px; left: -30px; display: none;" class="pokemon" src="imagens/pokemons/pk11.png" alt="pokemon">
+            <img id="pk12" style="top: 490px; left: 110px; display: none;" class="pokemon" src="imagens/pokemons/pk12.png" alt="pokemon">
+            <img id="pk13" style="top: 490px; left: 245px; display: none;" class="pokemon" src="imagens/pokemons/pk13.png" alt="pokemon">
+            <img id="pk14" style="top: 490px; left: 385px; display: none;" class="pokemon" src="imagens/pokemons/pk14.png" alt="pokemon">
+            <img id="pk15" style="top: 490px; left: 525px; display: none;" class="pokemon" src="imagens/pokemons/pk15.png" alt="pokemon">
+            <img id="pk16" style="top: 735px; left: -30px; display: none;" class="pokemon" src="imagens/pokemons/pk16.png" alt="pokemon">
+            <img id="pk17" style="top: 735px; left: 110px; display: none;" class="pokemon" src="imagens/pokemons/pk17.png" alt="pokemon">
+            <img id="pk18" style="top: 735px; left: 245px; display: none;" class="pokemon" src="imagens/pokemons/pk18.png" alt="pokemon">
+            <img id="pk19" style="top: 735px; left: 385px; display: none;" class="pokemon" src="imagens/pokemons/pk19.png" alt="pokemon">
+            <img id="pk20" style="top: 735px; left: 525px; display: none;" class="pokemon" src="imagens/pokemons/pk20.png" alt="pokemon">
+            <img id="pk21" style="top: 980px; left: -30px; display: none;" class="pokemon" src="imagens/pokemons/pk21.png" alt="pokemon">
+            <img id="pk22" style="top: 980px; left: 110px; display: none;" class="pokemon" src="imagens/pokemons/pk22.png" alt="pokemon">
+            <img id="pk23" style="top: 980px; left: 245px; display: none;" class="pokemon" src="imagens/pokemons/pk23.png" alt="pokemon">
+            <img id="pk24" style="top: 980px; left: 385px; display: none;" class="pokemon" src="imagens/pokemons/pk24.png" alt="pokemon">
+            <img id="pk25" style="top: 980px; left: 525px; display: none;" class="pokemon" src="imagens/pokemons/pk25.png" alt="pokemon">
+            <img id="pk26" style="top: 1230px; left: -30px; display: none;" class="pokemon" src="imagens/pokemons/pk26.png" alt="pokemon">
+            <img id="pk27" style="top: 1230px; left: 110px; display: none;" class="pokemon" src="imagens/pokemons/pk27.png" alt="pokemon">
+            <img id="pk28" style="top: 1230px; left: 245px; display: none;" class="pokemon" src="imagens/pokemons/pk28.png" alt="pokemon">
+            <img id="pk29" style="top: 1230px; left: 385px; display: none;" class="pokemon" src="imagens/pokemons/pk29.png" alt="pokemon">
+            <img id="pk30" style="top: 1230px; left: 525px; display: none;" class="pokemon" src="imagens/pokemons/pk30.png" alt="pokemon">
+            <img id="pk31" style="top: 1470px; left: -30px; display: none;" class="pokemon" src="imagens/pokemons/pk31.png" alt="pokemon">
+            <img id="pk32" style="top: 1470px; left: 110px; display: none;" class="pokemon" src="imagens/pokemons/pk32.png" alt="pokemon">
+            <img id="pk33" style="top: 1470px; left: 245px; display: none;" class="pokemon" src="imagens/pokemons/pk33.png" alt="pokemon">
+            <img id="pk34" style="top: 1470px; left: 385px; display: none;" class="pokemon" src="imagens/pokemons/pk34.png" alt="pokemon">
+            <img id="pk35" style="top: 1470px; left: 525px; display: none;" class="pokemon" src="imagens/pokemons/pk35.png" alt="pokemon">
+            <img id="pk36" style="top: 1710px; left: -30px; display: none;" class="pokemon" src="imagens/pokemons/pk36.png" alt="pokemon">
+            <img id="pk37" style="top: 1710px; left: 110px; display: none;" class="pokemon" src="imagens/pokemons/pk37.png" alt="pokemon">
+            <img id="pk38" style="top: 1710px; left: 245px; display: none;" class="pokemon" src="imagens/pokemons/pk38.png" alt="pokemon">
+            <img id="pk39" style="top: 1710px; left: 385px; display: none;" class="pokemon" src="imagens/pokemons/pk39.png" alt="pokemon">
+            <img id="pk40" style="top: 1710px; left: 525px; display: none;" class="pokemon" src="imagens/pokemons/pk40.png" alt="pokemon">
+            <img id="pk41" style="top: 1960px; left: -30px; display: none;" class="pokemon" src="imagens/pokemons/pk41.png" alt="pokemon">
+            <img id="pk42" style="top: 1960px; left: 110px; display: none;" class="pokemon" src="imagens/pokemons/pk42.png" alt="pokemon">
+            <img id="pk43" style="top: 1960px; left: 245px; display: none;" class="pokemon" src="imagens/pokemons/pk43.png" alt="pokemon">
+            <img id="pk44" style="top: 1960px; left: 385px; display: none;" class="pokemon" src="imagens/pokemons/pk44.png" alt="pokemon">
+            <img id="pk45" style="top: 1960px; left: 525px; display: none;" class="pokemon" src="imagens/pokemons/pk45.png" alt="pokemon">
+            <img id="pk46" style="top: 2210px; left: -30px; display: none;" class="pokemon" src="imagens/pokemons/pk46.png" alt="pokemon">
+            <img id="pk47" style="top: 2210px; left: 110px; display: none;" class="pokemon" src="imagens/pokemons/pk47.png" alt="pokemon">
+            <img id="pk48" style="top: 2210px; left: 245px; display: none;" class="pokemon" src="imagens/pokemons/pk48.png" alt="pokemon">
+            <img id="pk49" style="top: 2210px; left: 385px; display: none;" class="pokemon" src="imagens/pokemons/pk49.png" alt="pokemon">
+            <img id="pk50" style="top: 2210px; left: 525px; display: none;" class="pokemon" src="imagens/pokemons/pk50.png" alt="pokemon">
+            <img id="pk51" style="top: 2455px; left: -30px; display: none;" class="pokemon" src="imagens/pokemons/pk51.png" alt="pokemon">
+            <img id="pk52" style="top: 2455px; left: 110px; display: none;" class="pokemon" src="imagens/pokemons/pk52.png" alt="pokemon">
+            <img id="pk53" style="top: 2455px; left: 245px; display: none;" class="pokemon" src="imagens/pokemons/pk53.png" alt="pokemon">
+            <img id="pk54" style="top: 2455px; left: 385px; display: none;" class="pokemon" src="imagens/pokemons/pk54.png" alt="pokemon">
+            <img id="pk55" style="top: 2455px; left: 535px; display: none;" class="pokemon" src="imagens/pokemons/pk55.png" alt="pokemon">
+            <img id="pk56" style="top: 2700px; left: -30px; display: none;" class="pokemon" src="imagens/pokemons/pk56.png" alt="pokemon">
+            <img id="pk57" style="top: 2700px; left: 110px; display: none;" class="pokemon" src="imagens/pokemons/pk57.png" alt="pokemon">
+            <img id="pk58" style="top: 2700px; left: 245px; display: none;" class="pokemon" src="imagens/pokemons/pk58.png" alt="pokemon">
+            <img id="pk59" style="top: 2700px; left: 385px; display: none;" class="pokemon" src="imagens/pokemons/pk59.png" alt="pokemon">
+            <img id="pk60" style="top: 2700px; left: 525px; display: none;" class="pokemon" src="imagens/pokemons/pk60.png" alt="pokemon">
+
+            <img style="width: 685px; height: 3006px;" src="imagens/pokedexList.png" alt="pokedexList">
+        </div>
+
+        <div class="pokedex">
+            <p id="pokeball-counter" class="contagem-pokeball"> <span id="pokeball-counter">0</span></p>
+            <img onclick="incrementCounter(), decrementCounter()" class="pokeball" src="imagens/Pokeball Normal.png" alt="pokeball">
+        <img style="width: 526px; height: 735px;" src="imagens/pokedex.png" alt="pokedex">
+        </div>
+   
+    <p class="contagem-total"> <strong>Contagem Total de Clicks: </strong><span id="counter">0</span></p>
+</div>
+    <script>
+        let count = 0;
+        let pokeball_count = 0;
+
+        function incrementCounter() {
+            if(pokeball_count > 0){
+            count++;
+            document.getElementById("counter").textContent = count;
+            }
+        }
+
+        function decrementCounter() {
+            if(pokeball_count > 0){
+            pokeball_count--;
+            document.getElementById("pokeball-counter").textContent = pokeball_count;
+            if(pokeball_count === 0){
+                atualizarVisibilidade('pk1', 'true')
+            }
+        }
+        }
+
+        function sortearEAtualizarPokeball() {
+            if(pokeball_count === 0){
+        const nivelDeRaridade = sortearNivelDeRaridade();
+        const pokeballImage = document.querySelector('.pokeball');
+        const contador = document.getElementById('pokeball-counter');
+
+        pokeballImage.src = pokeballImages[nivelDeRaridade];
+
+         // Atualize o valor do contador com base no nível de raridade
+    switch (nivelDeRaridade) {
+        case 'normal':
+        contador.textContent = '100'; // Defina o valor desejado para "normal"
+        pokeball_count = 100;
+        break;
+        case 'rara':
+        contador.textContent = '500'; // Defina o valor desejado para "rara"
+        pokeball_count = 500;
+        break;
+        case 'epica':
+        contador.textContent = '1000'; // Defina o valor desejado para "superRara"
+        pokeball_count = 1000;
+        break;
+        case 'lendaria':
+        contador.textContent = '10000'; // Defina o valor desejado para "lendaria"
+        pokeball_count = 10000;
+        break;
+        default:
+        contador.textContent = '0';
+            }
+        }
+    }
+    </script>
+        <script src="script.js"></script>
+        <script src="sor.js"></script>
+</body>
+</html>
