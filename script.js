@@ -1,12 +1,27 @@
 document.addEventListener('DOMContentLoaded', function() {
-    const menuToggle = document.getElementById('menu-toggle');
+  var efeitoSonoroPokedex = document.getElementById('pokedex-botao');
+    const iconePokedex = document.getElementById('icone-pokedex');
     const menuLateral = document.getElementById('menu-lateral-pokedex');
    
     
-    menuToggle.addEventListener('click', function() {
+    iconePokedex.addEventListener('click', function() {
         menuLateral.classList.toggle('open');
+        efeitoSonoroPokedex.play();
     });
 });
+
+
+  // Lista de IDs de Pokémon normais (exemplo)
+  var pokemonsNormais = [5, 6, 8, 9, 10, 13, 15, 16, 17, 18, 19, 22, 23, 30, 35, 37, 38, 40, 42, 50, 51];
+
+  // Lista de IDs de Pokémon raros (exemplo)
+  var pokemonsRaros = [1, 2, 4, 11, 12, 20, 21, 29, 31, 32, 33, 34, 36, 39, 43, 44, 47, 48, 49, 52, 53];
+  
+  // Lista de IDs de Pokémon épicos (exemplo)
+  var pokemonsEpicos = [3, 24, 25, 26, 27, 28, 41, 45, 46, 54, 55];
+  
+  // Lista de IDs de Pokémon lendários (exemplo)
+  var pokemonsLendarios = [7, 14, 56, 57, 58, 59, 60];
 
 const pokeballImages = {
     normal: 'imagens/Pokeball Normal.png',
@@ -15,84 +30,63 @@ const pokeballImages = {
     lendaria: 'imagens/Master Ball.png',
   };
 
-  function sortearNivelDeRaridade() {
-    const raridade = Math.random();
-    if (raridade < 0.2) {
+  
+  var sorteio = {
+    numerosDisponiveis: Array.from({ length: 60 }, (_, i) => i + 1),
+    numerosSorteados: [],
+    
+    // Função para sortear um número de forma única
+    sortearNumeroUnico: function() {
+  
+      var indiceSorteado = Math.floor(Math.random() * this.numerosDisponiveis.length);
+      var numeroSorteado = this.numerosDisponiveis.splice(indiceSorteado, 1)[0];
+      this.numerosSorteados.push(numeroSorteado);
+  
+      return numeroSorteado;
+    }
+  };
+  
+  function verificarRaridade(numero) {
+  
+    // Verifica se o número está em alguma das listas de raridade
+    if (pokemonsNormais.includes(numero)) {
       return 'normal';
-    } else if (raridade < 0.4) {
+    } else if (pokemonsRaros.includes(numero)) {
       return 'rara';
-    } else if (raridade < 0.6) {
+    } else if (pokemonsEpicos.includes(numero)) {
       return 'epica';
-    } else if (raridade < 0.8) {
+    } else if (pokemonsLendarios.includes(numero)) {
       return 'lendaria';
     } else {
-      return 'lendaria';
+      return 'Não encontrado em nenhuma lista de raridade';
     }
   }
+// Função para mostrar uma imagem com base no ID
+function mostrarImagem(id) {
+    // Obtém a referência para a imagem com o ID especificado
+    var imagemAserAtivada = document.getElementById(id);
   
+    // Verifica se a imagem foi encontrada
+    if (imagemAserAtivada) {
+      // Define o estilo 'display' para 'block' para tornar a imagem visível
+      imagemAserAtivada.style.display = 'block';
+    } else {
+      // Se a imagem não for encontrada, exibe uma mensagem de erro
+      console.log('Imagem com ID ' + id + ' não encontrada.');
+    }
+  }
 
- // Função para ler e processar o arquivo de permissões
- function processarPermissoes() {
-    fetch('permissoes.txt') // Nome do seu arquivo de permissões
-      .then(response => response.text())
-      .then(data => {
-        const permissoes = data.split(';');
-        let totalPokemons = 0;
-        let pokemonsVisiveis = 0;
-  
-        for (const permissao of permissoes) {
-          const [pokemonInfo] = permissao.split('$').map(item => item.trim());
-          const [imagem, status, raridade] = pokemonInfo.split('=').map(item => item.trim());
-  
-          // Exemplo de lógica para contar o total de Pokémon
-          totalPokemons++;
-  
-          // Exemplo de lógica para definir a visibilidade da imagem com base no status
-          const imagemElement = document.getElementById(imagem);
-          if (status === 'true') {
-            imagemElement.style.display = 'block';
-            pokemonsVisiveis++;
-          } else {
-            imagemElement.style.display = 'none';
-          }
-  
-          // Exemplo de lógica para tratar o nível de raridade
-          switch (raridade) {
-            case 'normal':
-              // Lógica para Pokémon com raridade "normal"
-              break;
-            case 'epico':
-              // Lógica para Pokémon com raridade "epico"
-              break;
-            // Adicione mais casos para outros níveis de raridade, se necessário
-            default:
-              // Lógica padrão, se o nível de raridade não for reconhecido
-          }
-        }
+  // Obtém a referência para o elemento de áudio
+var efeitoSonoroConfeti = document.getElementById('efeito-sonoro-confetti');
 
-        // Calcule a porcentagem de Pokémon visíveis
-        const porcentagemVisiveis = (pokemonsVisiveis / totalPokemons) * 100;
+// Obtém a referência para a imagem que dispara o som
+var imagemClick = document.getElementById('click-logo'); // Substitua 'sua-imagem' pelo ID da sua imagem
 
-         const barraDeProgresso = document.getElementById('barra-de-progresso');
-        if (barraDeProgresso) {
-          barraDeProgresso.style.width = porcentagemVisiveis + '%';
+// Adiciona um ouvinte de eventos para o clique na imagem
+imagemClick.addEventListener('click', function () {
+  // Reproduz o efeito sonoro
+  efeitoSonoroConfeti.play();
+});
 
-          // Adicione lógica para definir a cor com base em intervalos de porcentagem
-          if (porcentagemVisiveis >= 80) {
-            barraDeProgresso.style.backgroundColor = 'green'; // Verde para mais de 80%
-          } else if (porcentagemVisiveis >= 50) {
-            barraDeProgresso.style.backgroundColor = 'yellow'; // Amarelo para mais de 50%
-          } else {
-            barraDeProgresso.style.backgroundColor = 'red'; // Vermelho para menos de 50%
-          }
-        }
-      })
-      .catch(error => {
-        console.error('Erro ao carregar permissões:', error);
-      });
-}
 
-  
-  // Chame a função para processar as permissões quando a página carregar
-  window.onload = processarPermissoes();
-  
+
