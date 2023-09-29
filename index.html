@@ -79,7 +79,7 @@
     </header>
      <!-- Botão para abrir/fechar o menu -->
   <div class="menu-toggle" id="icone-pokedex"></div>
-    <div class="background-principal">
+    <div class="background-principal"> </div>
         <div class="menu-lateral-pokedex" id="menu-lateral-pokedex">
 
             <img id="1" style="top: 0px; left: -30px; display: none;" class="pokemon" src="imagens/pokemons/pk1.png" alt="pokemon">
@@ -146,14 +146,15 @@
             <img style="width: 685px; height: 3006px;" src="imagens/pokedexList.png" alt="pokedexList">
         </div>
 
-        <div class="pokedex">
+        <div>
             <p id="pokeball-counter" class="contagem-pokeball"> <span id="pokeball-counter">0</span></p>
             <img onclick="incrementCounter(), decrementCounter()" id="pokeball" class="pokeball" src="imagens/empty.png" alt="pokeball">
-        <img style="width: 526px; height: 735px;" src="imagens/pokedex.png" alt="pokedex">
+        <img class="pokedex" src="imagens/pokedex.png" alt="pokedex">
         </div>
    
-    <p class="contagem-total"> <strong>Total click count: </strong><span id="counter">0</span></p>
-</div>
+        <p class="contagem-total"> <strong>Total click count: </strong><span id="counter">0</span></p>
+
+
     <script>
         let count = 0;
         let pokeball_count = 0;
@@ -181,7 +182,7 @@
                 var brilho = document.getElementById('brilho-pokemon');
                 brilho.style.display = 'block';
                 aumentarProgresso()
-                totalPokemons += 1
+                totalPokemons += 60
                 if(totalPokemons === 60){
                 
                 pokeballImage.src = 'imagens/finish.png'
