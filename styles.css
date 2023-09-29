@@ -251,7 +251,528 @@ body{
 
 
 
-@media (max-width: 725px) {
+
+
+
+
+
+
+@media (min-width: 768px) {
+    #music{
+        position: absolute;
+        top: 30px;
+        left: 40px;
+        width: 50px;
+        height: 50px;
+        cursor: pointer;
+        transition: 0.2s; /* Adiciona uma transição suave */
+        overflow-y: auto
+    }
+    
+    #music:hover {
+        transform: scale(1.3); 
+    }
+    
+    #medalha{
+        position: absolute;
+        top: 240px;
+        left: 250px;
+        width: 100px;
+        height: 100px;
+        display: none;
+        z-index: 3;
+        cursor: pointer;
+        transition: 0.2s; /* Adiciona uma transição suave */
+        overflow-y: auto
+    }
+    
+    #medalha:hover {
+        transform: scale(1.2); 
+    }
+    
+    .click{
+        position: absolute;
+        top: 50px;
+        left: 800px;
+        width: 130px;
+        height: 130px;
+        z-index: 2;
+    }
+    
+    .brilho{
+        position: absolute;
+        display: none;
+        top: 210px;
+        left: 610px;
+        width: 250px;
+        height: 250px;
+        z-index: 1;
+    }
+    
+    .brilho-pokemon{
+        position: absolute;
+        display: none;
+        top: 205px;
+        left: 1110px;
+        width: 250px;
+        height: 200px;
+        z-index: 1;
+    }
+    .barra-de-progresso {
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 10px;
+        background-color:#07db27;
+        border-top: 0px solid #ffffff;
+        text-align: center;
+        line-height: 30px;
+        font-size: 14px;
+        color: #333;
+        z-index: 2;
+    }
+    .barra-de-progresso-vermelha {
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 10px;
+        background-color:#ff0000;
+        border-top: 0px solid #ffffff;
+        text-align: center;
+        line-height: 30px;
+        font-size: 14px;
+        color: #333;
+        z-index: 1;
+    }
+    
+    
+    .background-principal{
+        background-image: url(imagens/fundoroxogif.gif);
+        background-size: cover;
+        z-index: 1;
+        padding: 365px 
+    }
+    
+    .logo-pokemon{
+        position: fixed;
+        top: 0px;
+        left: 550px;
+        height: 147px;
+        width: 400px;
+        z-index: 1;
+    }
+    
+    .icone-presente{
+        position: fixed;
+        top: 250px;
+        left: 690px;
+        height: 150px;
+        width: 112px;
+        z-index: 2;
+        cursor: pointer; /* Altera o cursor para a mão ao passar o mouse */
+    }
+    
+    
+      .icone-presente::before {
+        content: ""; /* Adiciona um conteúdo vazio */
+        position: absolute; /* Define a posição absoluta em relação ao elemento pai */
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 10
+      }
+    
+    .pokebolas-presente{
+        position: fixed;
+        top: 280px;
+        left: 630px;
+        height: 250px;
+        width: 250px;
+        z-index: 2;
+    }
+    
+    .menu-toggle {
+        position: fixed;
+        background-image: url(imagens/pokedex-icon.png);
+        background-size: cover;
+        padding: 40px;
+        top: 100px;
+        left: 20px;
+        cursor: pointer;
+        z-index: 3; /* Colocado acima do menu lateral */
+        transition: 0.1s;
+    }
+    
+    
+    
+    .menu-lateral-pokedex{
+        position: absolute;
+        top: 180px;
+        left: -750px; /* Inicialmente, oculto à esquerda */
+        border: 0px;
+        width: 700px;
+        height: 500px;
+        background-color: rgba(0, 0, 0, 0.5); /* Cor de fundo com transparência */
+        z-index: 3;
+        transition: 0.4s; /* Adiciona uma transição suave */
+        overflow-y: auto;
+    }
+    
+    .menu-lateral-pokedex.open {
+        left: 5px;
+    }
+    
+    .menu-toggle:hover {
+        transform: scale(1.1); 
+    }
+    .pokemon{
+        position: absolute;
+        top: 0px;
+        left: 0px;
+        width: 200px;
+        height: 200px;
+    }
+    .pokedex{
+        position: absolute;
+        top: 0px;
+        right: 10px;
+        height: 735px;
+        width: 526px;
+    }
+    
+    .pokeball{
+        position: absolute;
+        top: 215px;
+        right: 207px;
+        width: 180px;
+        height: 180px;
+        z-index: 2;
+        transition: transform 0.1s ease-in-out;
+        cursor: pointer;
+    }
+    
+    
+    
+    .contagem-total{
+        position: absolute;
+        top: 665px;
+        left: 30px;
+        color: rgb(255, 255, 255);
+        font-size: 25px;
+    }
+    
+    .contagem-pokeball{
+        position: absolute;
+        top: 525px;
+        right: 265px;
+        color: rgb(255, 255, 255);
+        font-size: 50px;
+        z-index: 2;
+    }
+    
+      .texto-balao{
+        position: absolute;
+        font-size: 25px;
+        top: 230px;
+        left: 170px;
+        z-index: 2;
+      }
+    
+      .balao{
+        position: absolute;
+        top: 160px;
+        left: 130px;
+        z-index: 1;
+      }
+    
+      .pikachu{
+        position: absolute;
+        top: 360px;
+        left: 70px;
+        width: 324px;
+        height: 300px;
+        z-index: 3;
+      }
+    
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    @media (max-width: 720px) {
+        #music{
+            position: absolute;
+            top: 660px;
+            left: 330px;
+            width: 50px;
+            height: 50px;
+            cursor: pointer;
+            transition: 0.2s; /* Adiciona uma transição suave */
+            overflow-y: auto
+        }
+        
+        #music:hover {
+            transform: scale(1.3); 
+        }
+        
+        #medalha{
+            position: absolute;
+            top: 500px;
+            left: 555px;
+            width: 70px;
+            height: 70px;
+            display: none;
+            z-index: 3;
+            cursor: pointer;
+            transition: 0.2s; /* Adiciona uma transição suave */
+            overflow-y: auto
+        }
+        
+        #medalha:hover {
+            transform: scale(1.2); 
+        }
+        
+        .click{
+            position: fixed;
+            top: 55px;
+            left: 400px;
+            width: 68px;
+            height: 70px;
+            z-index: 2;
+        }
+        
+        .brilho{
+            position: absolute;
+            display: none;
+            top: 20px;
+            right: 20px;
+            width: 120px;
+            height: 120px;
+            z-index: 1;
+        }
+        
+        .brilho-pokemon{
+            position: absolute;
+            display: none;
+            top: 255px;
+            left: 240px;
+            width: 200px;
+            height: 155px;
+            z-index: 1;
+        }
+        .barra-de-progresso {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 10px;
+            background-color:#07db27;
+            border-top: 0px solid #ffffff;
+            text-align: center;
+            line-height: 30px;
+            font-size: 14px;
+            color: #333;
+            z-index: 2;
+        }
+        .barra-de-progresso-vermelha {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 10px;
+            background-color:#ff0000;
+            border-top: 0px solid #ffffff;
+            text-align: center;
+            line-height: 30px;
+            font-size: 14px;
+            color: #333;
+            z-index: 1;
+        }
+        
+        
+        .background-principal{
+            background-image: url(imagens/fundoRoxoMobile.gif);
+            background-size: 720px 720px;
+            z-index: 1;
+            padding: 357px 
+        }
+        
+        .logo-pokemon{
+            position: fixed;
+            top: 20px;
+            left: 230px;
+            height: 92px;
+            width: 250px;
+            z-index: 1;
+        }
+        
+        .icone-presente{
+            position: fixed;
+            top: 20px;
+            right: 30px;
+            height: 100px;
+            width: 75px;
+            z-index: 2;
+            cursor: pointer; /* Altera o cursor para a mão ao passar o mouse */
+        }
+        
+        
+          .icone-presente::before {
+            content: ""; /* Adiciona um conteúdo vazio */
+            position: absolute; /* Define a posição absoluta em relação ao elemento pai */
+            top: 20px;
+            right: 30px;
+            width: 100%;
+            height: 10
+          }
+        
+        .pokebolas-presente{
+            position: fixed;
+            top: 280px;
+            left: 200px;
+            height: 150px;
+            width: 150px;
+            z-index: 2;
+        }
+        
+        .menu-toggle {
+            position: fixed;
+            background-image: url(imagens/pokedex-icon.png);
+            background-size: cover;
+            padding: 40px;
+            top: 30px;
+            left: 40px;
+            cursor: pointer;
+            z-index: 3; /* Colocado acima do menu lateral */
+            transition: 0.1s;
+        }
+        
+        
+        
+        .menu-lateral-pokedex{
+            position: absolute;
+            top: 180px;
+            left: -750px; /* Inicialmente, oculto à esquerda */
+            border: 0px;
+            width: 700px;
+            height: 500px;
+            background-color: rgba(0, 0, 0, 0.5); /* Cor de fundo com transparência */
+            z-index: 3;
+            transition: 0.4s; /* Adiciona uma transição suave */
+            overflow-y: auto;
+        }
+        
+        .menu-lateral-pokedex.open {
+            left: 5px;
+        }
+        
+        .menu-toggle:hover {
+            transform: scale(1.1); 
+        }
+        .pokemon{
+            position: absolute;
+            top: 0px;
+            left: 0px;
+            width: 200px;
+            height: 200px;
+        }
+        .pokedex{
+            position: absolute;
+            top: 100px;
+            right: 145px;
+            width: 400px;
+            height: 559px;
+        }
+        
+        .pokeball{
+            position: absolute;
+            top: 255px;
+            left: 265px;
+            width: 150px;
+            height: 150px;
+            z-index: 2;
+            transition: transform 0.1s ease-in-out;
+            cursor: pointer;
+        }
+        
+        
+        
+        .contagem-total{
+            position: absolute;
+            top: 675px;
+            left: 20px;
+            color: rgb(255, 255, 255);
+            font-size: 15px;
+        }
+        
+        .contagem-pokeball{
+            position: absolute;
+            top: 505px;
+            right: 340px;
+            color: rgb(255, 255, 255);
+            font-size: 35px;
+            z-index: 1;
+        }
+        
+          .texto-balao{
+            position: absolute;
+            font-size: 13px;
+            top: 500px;
+            right: 40px;
+            z-index: 2;
+          }
+        
+          .balao{
+            position: absolute;
+            top: 470px;
+            right: 20px;
+            width: 180px;
+            z-index: 1;
+          }
+        
+          .pikachu{
+            position: absolute;
+            top: 580px;
+            right: 50px;
+            width: 150px;
+            height: 139px;
+            z-index: 3;
+          }
+        
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media (max-width: 490px) {
     #music{
         position: absolute;
         top: 660px;
