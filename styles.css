@@ -2,7 +2,7 @@ body{
     font-family: Montserrat, sans-serif;
 }
 
-@media (min-width: 768px) {
+@media (min-width: 1300px) {
 #music{
     position: absolute;
     top: 30px;
@@ -251,7 +251,7 @@ body{
 
 
 
-@media (max-width: 490px) {
+@media (max-width: 725px) {
     #music{
         position: absolute;
         top: 660px;
