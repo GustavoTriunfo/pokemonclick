@@ -260,10 +260,11 @@ body{
 @media (max-width: 985px) {
     #music{
         position: absolute;
-        top: 1790px;
+        top: 1630px;
         left: 60px;
         width: 150px;
         height: 150px;
+        z-index: 3;
         cursor: pointer;
         transition: 0.2s; /* Adiciona uma transição suave */
         overflow-y: auto
@@ -275,7 +276,7 @@ body{
     
     #medalha{
         position: absolute;
-        top: 1540px;
+        top: 1370px;
         left: 720px;
         width: 100px;
         height: 100px;
@@ -302,18 +303,18 @@ body{
     .brilho{
         position: absolute;
         display: none;
-        top: 1750px;
+        top: 1590px;
         left: 330px;
         width: 260px;
         height: 260px;
-        z-index: 1;
+        z-index: 2;
     }
     
     .brilho-pokemon{
         position: absolute;
         display: none;
         top: 685px;
-        left: 190px;
+        left: 200px;
         width: 470px;
         height: 380px;
         z-index: 1;
@@ -325,7 +326,6 @@ body{
         width: 100%;
         height: 10px;
         background-color:#07db27;
-        border-top: 0px solid #ffffff;
         text-align: center;
         line-height: 30px;
         font-size: 14px;
@@ -339,7 +339,6 @@ body{
         width: 100%;
         height: 10px;
         background-color:#ff0000;
-        border-top: 0px solid #ffffff;
         text-align: center;
         line-height: 30px;
         font-size: 14px;
@@ -352,7 +351,7 @@ body{
         background-image: url(imagens/fundoRoxoMobile.gif);
         background-size: 985px 747px;
         z-index: 1;
-        padding: 1000px 
+        padding: 920px 0px 
     }
     
     .logo-pokemon{
@@ -366,33 +365,14 @@ body{
     
     .icone-presente{
         position: absolute;
-        top: 1780px;
+        top: 1630px;
         left: 390px;
         height: 200px;
         width: 162px;
         z-index: 2;
         cursor: pointer; /* Altera o cursor para a mão ao passar o mouse */
     }
-    
-    
-      .icone-presente::before {
-        content: ""; /* Adiciona um conteúdo vazio */
-        position: absolute; /* Define a posição absoluta em relação ao elemento pai */
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 10
-      }
-    
-    .pokebolas-presente{
-        position: fixed;
-        top: 280px;
-        left: 630px;
-        height: 250px;
-        width: 250px;
-        z-index: 2;
-    }
-    
+      
     .menu-toggle {
         position: absolute;
         background-image: url(imagens/pokedex-icon.png);
@@ -457,7 +437,7 @@ body{
     
     .contagem-total{
         position: absolute;
-        top: 1930px;
+        top: 1760px;
         left: 30px;
         color: rgb(255, 255, 255);
         font-size: 25px;
@@ -475,21 +455,21 @@ body{
       .texto-balao{
         position: absolute;
         font-size: 25px;
-        top: 1530px;
+        top: 1360px;
         left: 640px;
         z-index: 2;
       }
     
       .balao{
         position: absolute;
-        top: 1460px;
+        top: 1290px;
         right: 0px;
         z-index: 1;
       }
     
       .pikachu{
         position: absolute;
-        top: 1680px;
+        top: 1530px;
         right: 0px;
         width: 324px;
         height: 300px;
