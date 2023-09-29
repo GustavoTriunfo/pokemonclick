@@ -260,7 +260,7 @@ body{
 @media (max-width: 985px) {
     #music{
         position: absolute;
-        top: 1290px;
+        top: 1790px;
         left: 60px;
         width: 150px;
         height: 150px;
@@ -275,8 +275,8 @@ body{
     
     #medalha{
         position: absolute;
-        top: 240px;
-        left: 250px;
+        top: 1540px;
+        left: 720px;
         width: 100px;
         height: 100px;
         display: none;
@@ -292,7 +292,7 @@ body{
     
     .click{
         position: absolute;
-        top: 120px;
+        top: 160px;
         left: 600px;
         width: 150px;
         height: 150px;
@@ -302,20 +302,20 @@ body{
     .brilho{
         position: absolute;
         display: none;
-        top: 210px;
-        left: 610px;
-        width: 250px;
-        height: 250px;
+        top: 1750px;
+        left: 330px;
+        width: 260px;
+        height: 260px;
         z-index: 1;
     }
     
     .brilho-pokemon{
         position: absolute;
         display: none;
-        top: 205px;
-        left: 1110px;
-        width: 250px;
-        height: 200px;
+        top: 685px;
+        left: 190px;
+        width: 470px;
+        height: 380px;
         z-index: 1;
     }
     .barra-de-progresso {
@@ -352,12 +352,12 @@ body{
         background-image: url(imagens/fundoRoxoMobile.gif);
         background-size: 985px 747px;
         z-index: 1;
-        padding: 747px 
+        padding: 1000px 
     }
     
     .logo-pokemon{
         position: absolute;
-        top: 0px;
+        top: 40px;
         left: 135px;
         height: 258px;
         width: 700px;
@@ -366,7 +366,7 @@ body{
     
     .icone-presente{
         position: absolute;
-        top: 1280px;
+        top: 1780px;
         left: 390px;
         height: 200px;
         width: 162px;
@@ -394,12 +394,12 @@ body{
     }
     
     .menu-toggle {
-        position: fixed;
+        position: absolute;
         background-image: url(imagens/pokedex-icon.png);
         background-size: cover;
-        padding: 40px;
-        top: 100px;
-        left: 20px;
+        padding: 70px;
+        top: 400px;
+        left: 700px;
         cursor: pointer;
         z-index: 3; /* Colocado acima do menu lateral */
         transition: 0.1s;
@@ -409,11 +409,11 @@ body{
     
     .menu-lateral-pokedex{
         position: absolute;
-        top: 180px;
+        top: 880px;
         left: -750px; /* Inicialmente, oculto à esquerda */
         border: 0px;
         width: 700px;
-        height: 500px;
+        height: 800px;
         background-color: rgba(0, 0, 0, 0.5); /* Cor de fundo com transparência */
         z-index: 3;
         transition: 0.4s; /* Adiciona uma transição suave */
@@ -436,18 +436,18 @@ body{
     }
     .pokedex{
         position: absolute;
-        top: 200px;
-        right: 75px;
-        height: 1100px;
-        width: 788px;
+        top: 300px;
+        right: -30px;
+        height: 1400px;
+        width: 1003px;
     }
     
     .pokeball{
         position: absolute;
-        top: 215px;
-        right: 207px;
-        width: 180px;
-        height: 180px;
+        top: 690px;
+        right: 330px;
+        width: 370px;
+        height: 370px;
         z-index: 2;
         transition: transform 0.1s ease-in-out;
         cursor: pointer;
@@ -457,7 +457,7 @@ body{
     
     .contagem-total{
         position: absolute;
-        top: 1430px;
+        top: 1930px;
         left: 30px;
         color: rgb(255, 255, 255);
         font-size: 25px;
@@ -465,31 +465,31 @@ body{
     
     .contagem-pokeball{
         position: absolute;
-        top: 525px;
-        right: 265px;
+        top: 1300px;
+        right: 465px;
         color: rgb(255, 255, 255);
-        font-size: 50px;
+        font-size: 100px;
         z-index: 2;
     }
     
       .texto-balao{
         position: absolute;
         font-size: 25px;
-        top: 1030px;
-        right: 30px;
+        top: 1530px;
+        left: 640px;
         z-index: 2;
       }
     
       .balao{
         position: absolute;
-        top: 960px;
+        top: 1460px;
         right: 0px;
         z-index: 1;
       }
     
       .pikachu{
         position: absolute;
-        top: 1180px;
+        top: 1680px;
         right: 0px;
         width: 324px;
         height: 300px;
