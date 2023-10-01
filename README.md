@@ -16,3 +16,5 @@ This page was initially developed for the web only. But realizing the potential 
 
 <a href="https://imgbb.com/"><img src="https://i.ibb.co/km5FPXb/Pok-mon-Click-1.gif" alt="Pok-mon-Click-1" border="0" /></a>
 
+The intention was to create a game that captivates the player to continue clicking on the screen. So the idea came to do this related to the Pokémon universe.
+
