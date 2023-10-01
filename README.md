@@ -10,3 +10,9 @@ In this repository, you will find more details about my project "Pokémon Click!
 
 Image from the "Pokémon Click!" project in the Mobile version.
 
+## About the project
+
+This page was initially developed for the web only. But realizing the potential I decided to make a mobile version. And in current times, responsiveness is something considered basic and necessary, so that's it.
+
+<a href="https://imgbb.com/"><img src="https://i.ibb.co/km5FPXb/Pok-mon-Click-1.gif" alt="Pok-mon-Click-1" border="0" /></a>
+
